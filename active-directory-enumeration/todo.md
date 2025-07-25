@@ -78,4 +78,22 @@ Now we have the list of Restricted Groups of GPO \`XXX\`. We list the members of
 
 ```powershell
 > (Get-DomainOU -Identity Hybrid).distinguishedname | %{Get-DomainObject -SearchBase $_} | select name,samaccounttype
+> (Get-DomainOU -Identity HybridConnect).distinguishedname | %{Get-DomainObject -SearchBase $_} | select name,samaccounttype
+> Get-ADOrganizationalUnit -Identity 'OU=Hybrid,DC=us,DC=techcorp,DC=local' | %{Get-ADObject -Filter * -SearchBase $_} | select Name,ObjectClass
+```
+
+The members of these groups may help compromise Entra ID tenant if compromised.
+
+## List GPOs
+
+```powershell
+> Get-DomainGPO
+```
+
+### List GPO applying to Group
+
+```powershell
+> (Get-DomainOU -Identity HybridConnect).gplink
+[LDAP://cn={5269764B-0FBA-43B6-82F7-C1E3B1007FFF},cn=policies,cn=system,DC=us,DC=techcorp,DC=local;0]
+> Get-DomainGPO -Identity '{5269764B-0FBA-43B6-82F7-C1E3B1007FFF}'
 ```
