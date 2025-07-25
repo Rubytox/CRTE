@@ -4,4 +4,5 @@
 
 ## Active Directory Enumeration
 
-* [TODO](active-directory-enumeration/todo.md)
+* [SharpHound](active-directory-enumeration/sharphound.md)
+* [Basic enum](active-directory-enumeration/todo.md)
