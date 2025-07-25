@@ -11,6 +11,7 @@
 ```powershell
 > Get-ADTrust -Filter *
 [PowerView]> Get-ForestDomain -Verbose | Get-DomainTrust | ?{$_.TrustAttributes -eq 'FILTER_SIDS'}
+[PowerView]> Get-ForestTrust -Forest domain.local
 ```
 
 Look for "Name" and "Direction". Results also include trust between child and parent domains (e.g. us.techcorp.local and techcorp.local). However it is limited to the current domain, specify `Server` to list trusts of parent domain.
