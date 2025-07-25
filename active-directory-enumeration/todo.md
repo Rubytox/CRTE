@@ -97,3 +97,15 @@ The members of these groups may help compromise Entra ID tenant if compromised.
 [LDAP://cn={5269764B-0FBA-43B6-82F7-C1E3B1007FFF},cn=policies,cn=system,DC=us,DC=techcorp,DC=local;0]
 > Get-DomainGPO -Identity '{5269764B-0FBA-43B6-82F7-C1E3B1007FFF}'
 ```
+
+## Enumerate ACL
+
+With PowerView, list modify ACLs for user `XXX`:
+
+```powershell
+> Find-InterestingDomainAcl -ResolveGUIDs | ?{$_.IdentityReferenceName -match "XXX"}
+```
+
+**This takes a long time, may be better to use BloodHound for this type of enumerations.**
+
+However, BloodHound does not show ACLs on OUs, so it may still be interesting to launch this.
