@@ -2,28 +2,62 @@
 
 ## Import AD modules
 
-```
-Import-Module C:\AD\Tools\ADModule-master\Microsoft.ActiveDirectory.Management.dll
-Import-Module C:\AD\Tools\ADModule-master\ActiveDirectory\ActiveDirectory.psd1
+```powershell
+> Import-Module C:\AD\Tools\ADModule-master\Microsoft.ActiveDirectory.Management.dll
+> Import-Module C:\AD\Tools\ADModule-master\ActiveDirectory\ActiveDirectory.psd1
 ```
 
 ## List users
 
-```
-Get-ADUser -Filter *
+```powershell
+> Get-ADUser -Filter *
 ```
 
 ## List and expand property
 
-```
-Get-ADUser -Filter * | Select -ExpandProperty sAMAccountName
-Get-ADUser -Filter * | select -expand sAMAccountName
+```powershell
+> Get-ADUser -Filter * | Select -ExpandProperty sAMAccountName
+> Get-ADUser -Filter * | select -expand sAMAccountName
 ```
 
 ## List groups
 
+```powershell
+> Get-ADGroup -Filter *
+> Get-ADGroup -Identity 'Domain Admins' -Properties *
+> Get-ADGroup -Identity 'Domain Admins' -Properties * | select -expand members
 ```
-Get-ADGroup -Filter *
-Get-ADGroup -Identity 'Domain Admins' -Properties *
-Get-ADGroup -Identity 'Domain Admins' -Properties * | select -expand members
+
+## List group members
+
+```powershell
+> Get-ADGroupMember -Identity 'Domain Admins'
+> Get-ADGroupMember -Identity 'Enterprise Admins'
+```
+
+Listing Enterprise Admins only works for a root domain: Enterprise Admins group does not exist in a subdomain.
+
+```powershell
+> Get-ADGroupMember -Identity 'Enterprise Admins' -Server rootforest.local
+```
+
+## Get Domain Policy
+
+Using Powerview:
+
+<pre class="language-powershell"><code class="lang-powershell"><strong>> . C:\AD\Tools\PowerView.ps1
+</strong>> Get-DomainPolicy
+> (Get-DomainPolicy).KerberosPolicy
+</code></pre>
+
+## List GPO Restricted Groups
+
+Using Powerview:
+
+```powershell
+> . C:\AD\Tools\PowerView.ps1
+> Get-DomainGPOLocalGroup
+GPODisplayName : XXX
+GroupName : domain\YYY
+GroupMemberOf : { SID }
 ```
