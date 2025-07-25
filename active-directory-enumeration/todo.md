@@ -61,3 +61,21 @@ GPODisplayName : XXX
 GroupName : domain\YYY
 GroupMemberOf : { SID }
 ```
+
+Now we have the list of Restricted Groups of GPO \`XXX\`. We list the members of this group:
+
+```powershell
+> Get-DomainGroupMember -Identity YYY
+```
+
+## List OUs
+
+```powershell
+> Get-DomainOU
+```
+
+## List Hybrid & HybridConnect OUs
+
+```powershell
+> (Get-DomainOU -Identity Hybrid).distinguishedname | %{Get-DomainObject -SearchBase $_} | select name,samaccounttype
+```
