@@ -15,6 +15,7 @@
 ## AD Privilege escalation
 
 * [Kerberoasting](ad-privilege-escalation/kerberoasting.md)
+* [LAPS](ad-privilege-escalation/laps.md)
 
 ## Misc
 
