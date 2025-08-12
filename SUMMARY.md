@@ -17,6 +17,10 @@
 * [Kerberoasting](ad-privilege-escalation/kerberoasting.md)
 * [LAPS](ad-privilege-escalation/laps.md)
 
+## Lateral Movements
+
+* [LSASS](lateral-movements/lsass.md)
+
 ## Misc
 
 * [AD Authentication](misc/ad-authentication.md)
