@@ -25,3 +25,5 @@
 ## Misc
 
 * [AD Authentication](misc/ad-authentication.md)
+* [Check for EDR](misc/check-for-edr.md)
+* [Evading EDR](misc/evading-edr.md)

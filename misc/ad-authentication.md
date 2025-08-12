@@ -46,3 +46,9 @@ This opens a non-interactive session through WinRM. It works as Evil-WinRM on Li
 > winrs -r:server -u:.\local_user -p:<password> cmd
 > winrs -r:server -u:domain_user -p:<password> cmd
 ```
+
+If we have a TGT for a domain user, we skip the password option:
+
+```powershell
+> winrs -r:server -u:domain_user cmd
+```

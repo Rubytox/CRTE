@@ -109,3 +109,10 @@ With PowerView, list modify ACLs for user `XXX`:
 **This takes a long time, may be better to use BloodHound for this type of enumerations.**
 
 However, BloodHound does not show ACLs on OUs, so it may still be interesting to launch this.
+
+## Enumerate local admin privileges
+
+```powershell
+> . C:\AD\Tools\Find-PSRemotingLocalAdminAccess.ps1
+> Find-PSRemotingLocalAdminAccess -Domain us.techcorp.local -Verbose
+```
