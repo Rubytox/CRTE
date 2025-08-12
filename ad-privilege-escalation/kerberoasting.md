@@ -1,7 +1,5 @@
 # Kerberoasting
 
-##
-
 When a user account has a Service Principal Name, it is possible to request a Service Ticket for the service mentionned in the SPN.
 
 The Service Ticket is encrypted with the password of the user account: it is possible to crack the ST to retrieve the user account's password.
