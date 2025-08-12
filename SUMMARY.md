@@ -16,6 +16,7 @@
 
 * [Kerberoasting](ad-privilege-escalation/kerberoasting.md)
 * [LAPS](ad-privilege-escalation/laps.md)
+* [gMSA](ad-privilege-escalation/gmsa.md)
 
 ## Lateral Movements
 

