@@ -25,6 +25,10 @@
 * [S4U](ad-privilege-escalation/s4u.md)
 * [Golden ticket](ad-privilege-escalation/golden-ticket.md)
 
+## ADCS
+
+* [Recon](adcs/recon.md)
+
 ## Lateral Movements
 
 ## Misc
