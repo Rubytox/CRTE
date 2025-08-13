@@ -15,12 +15,12 @@
 ## AD Privilege escalation
 
 * [Kerberoasting](ad-privilege-escalation/kerberoasting.md)
+* [LSASS](ad-privilege-escalation/lsass.md)
 * [LAPS](ad-privilege-escalation/laps.md)
 * [gMSA](ad-privilege-escalation/gmsa.md)
+* [Unconstrained delegation](ad-privilege-escalation/unconstrained-delegation.md)
 
 ## Lateral Movements
-
-* [LSASS](lateral-movements/lsass.md)
 
 ## Misc
 
