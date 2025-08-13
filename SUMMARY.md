@@ -23,6 +23,7 @@
 * [RBCD](ad-privilege-escalation/rbcd.md)
 * [DCSync](ad-privilege-escalation/dcsync.md)
 * [S4U](ad-privilege-escalation/s4u.md)
+* [Golden ticket](ad-privilege-escalation/golden-ticket.md)
 
 ## Lateral Movements
 
