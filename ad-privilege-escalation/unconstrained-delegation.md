@@ -25,3 +25,16 @@ Here, the server `US-Web` has unconstrained delegation enabled.
 
 _Note: it is expected for domain controllers to have UD enabled._
 
+## Exploit UD
+
+First, on the UD server, run Rubeus in monitor mode:
+
+```powershell
+> .\Rubeus.exe monitor /targetuser:US-DC$ /interval:5 /nowrap
+```
+
+Rubeus will monitor authentications from user `US-DC$` every 5 seconds.
+
+Then, coerce the target server to authenticate to the UD server, with [coerce-authentication.md](../misc/coerce-authentication.md "mention").
+
+Rubeus catches the TGT that `US-DC$` passes to authenticate. It is then possible to elevate privileges on the `US-DC` machine with [s4u.md](s4u.md "mention"). In addition, if the target server is a domain controller, it is possibly to directly perform a [dcsync.md](dcsync.md "mention") attack to compromise the domain.

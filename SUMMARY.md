@@ -19,6 +19,8 @@
 * [LAPS](ad-privilege-escalation/laps.md)
 * [gMSA](ad-privilege-escalation/gmsa.md)
 * [Unconstrained delegation](ad-privilege-escalation/unconstrained-delegation.md)
+* [DCSync](ad-privilege-escalation/dcsync.md)
+* [S4U](ad-privilege-escalation/s4u.md)
 
 ## Lateral Movements
 
@@ -27,3 +29,4 @@
 * [AD Authentication](misc/ad-authentication.md)
 * [Check for EDR](misc/check-for-edr.md)
 * [Evading EDR](misc/evading-edr.md)
+* [Coerce authentication](misc/coerce-authentication.md)
