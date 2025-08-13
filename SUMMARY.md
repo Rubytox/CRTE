@@ -20,6 +20,7 @@
 * [gMSA](ad-privilege-escalation/gmsa.md)
 * [Unconstrained delegation](ad-privilege-escalation/unconstrained-delegation.md)
 * [Constrained delegation](ad-privilege-escalation/constrained-delegation.md)
+* [RBCD](ad-privilege-escalation/rbcd.md)
 * [DCSync](ad-privilege-escalation/dcsync.md)
 * [S4U](ad-privilege-escalation/s4u.md)
 

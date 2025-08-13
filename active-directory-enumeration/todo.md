@@ -116,3 +116,6 @@ However, BloodHound does not show ACLs on OUs, so it may still be interesting to
 > . C:\AD\Tools\Find-PSRemotingLocalAdminAccess.ps1
 > Find-PSRemotingLocalAdminAccess -Domain us.techcorp.local -Verbose
 ```
+
+## List computers on which we have write permission
+

