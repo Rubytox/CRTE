@@ -36,6 +36,12 @@ XXX
 
 
 
+## PKINIT authentication
+
+Authenticate with a certificate:a\`
+
+
+
 ## Tools
 
 ### WinRS

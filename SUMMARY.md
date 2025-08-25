@@ -24,6 +24,7 @@
 * [DCSync](ad-privilege-escalation/dcsync.md)
 * [S4U](ad-privilege-escalation/s4u.md)
 * [Golden ticket](ad-privilege-escalation/golden-ticket.md)
+* [DPAPI](ad-privilege-escalation/dpapi.md)
 
 ## ADCS
 
@@ -39,3 +40,4 @@
 * [Check for EDR](misc/check-for-edr.md)
 * [Evading EDR](misc/evading-edr.md)
 * [Coerce authentication](misc/coerce-authentication.md)
+* [Certificate manipulation](misc/certificate-manipulation.md)
