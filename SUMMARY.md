@@ -28,6 +28,8 @@
 ## ADCS
 
 * [Recon](adcs/recon.md)
+* [Exploitation](adcs/exploitation/README.md)
+  * [ESC1](adcs/exploitation/esc1.md)
 
 ## Lateral Movements
 
