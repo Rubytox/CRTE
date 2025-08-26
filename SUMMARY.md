@@ -7,6 +7,7 @@
 * [SharpHound](active-directory-enumeration/sharphound.md)
 * [Basic enum](active-directory-enumeration/todo.md)
 * [Domain trusts](active-directory-enumeration/domain-trusts.md)
+* [Entra ID recon](active-directory-enumeration/entra-id-recon.md)
 
 ## Local Privilege Escalation
 
