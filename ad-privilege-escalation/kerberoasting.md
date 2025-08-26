@@ -8,9 +8,13 @@ The Service Ticket is encrypted with the password of the user account: it is pos
 
 ## List users that have SPN
 
-```powershell
-> Get-ADUser -Filter {ServicePrincipalName -eq "$null"} -Properties ServicePrincipalName
-```
+<pre class="language-powershell"><code class="lang-powershell"><strong>> Get-ADUser -Filter {ServicePrincipalName -ne "$null"} -Properties ServicePrincipalName
+</strong></code></pre>
+
+## List users that have SPN in trusted forest
+
+<pre class="language-powershell"><code class="lang-powershell"><strong>> Get-ADUser -Filter {ServicePrincipalName -ne "$null"} -Properties ServicePrincipalName -Server dc.trust.local
+</strong></code></pre>
 
 ## Set SPN to user
 
