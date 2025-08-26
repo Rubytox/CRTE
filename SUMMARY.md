@@ -25,6 +25,7 @@
 * [S4U](ad-privilege-escalation/s4u.md)
 * [Golden ticket](ad-privilege-escalation/golden-ticket.md)
 * [DPAPI](ad-privilege-escalation/dpapi.md)
+* [DA to EA](ad-privilege-escalation/da-to-ea.md)
 
 ## ADCS
 
