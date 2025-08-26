@@ -38,9 +38,11 @@ XXX
 
 ## PKINIT authentication
 
-Authenticate with a certificate:a\`
+Authenticate with a certificate:
 
-
+```powershell
+> Rubeus.exe asktgt 
+```
 
 ## Tools
 
