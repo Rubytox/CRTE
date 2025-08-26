@@ -38,3 +38,5 @@ Rubeus will monitor authentications from user `US-DC$` every 5 seconds.
 Then, coerce the target server to authenticate to the UD server, with [coerce-authentication.md](../misc/coerce-authentication.md "mention").
 
 Rubeus catches the TGT that `US-DC$` passes to authenticate. It is then possible to elevate privileges on the `US-DC` machine with [s4u.md](s4u.md "mention"). In addition, if the target server is a domain controller, it is possibly to directly perform a [dcsync.md](dcsync.md "mention") attack to compromise the domain.
+
+Note: it is also possible to compromise a parent forest with this method by coercing the authentication of the DC of the parent domain.

