@@ -27,6 +27,7 @@
 * [Golden ticket](ad-privilege-escalation/golden-ticket.md)
 * [DPAPI](ad-privilege-escalation/dpapi.md)
 * [DA to EA](ad-privilege-escalation/da-to-ea.md)
+* [ADConnect](ad-privilege-escalation/adconnect.md)
 
 ## ADCS
 
