@@ -25,4 +25,6 @@ The user `appsvc` can impersonate any user on the machine `US-MSSQL`. It is even
 > .\Rubeus.exe s4u /user:appsvc /aes256:<key> /impersonateuser:administrator /msdsspn:CIFS/us-mssql.us.techcorp.local /altservice:HTTP /domain:us.techcorp.local /ptt
 ```
 
+_Note: if you only have password of user account, generate hash with `Rubeus hash`._
+
 It is then possible to authenticate to `US-MSSQL` ([ad-authentication.md](../misc/ad-authentication.md "mention")) we have domain admin privileges on this machine but we are limited to this machine.
