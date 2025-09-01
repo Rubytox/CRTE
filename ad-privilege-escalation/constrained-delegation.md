@@ -27,4 +27,6 @@ The user `appsvc` can impersonate any user on the machine `US-MSSQL`. It is even
 
 _Note: if you only have password of user account, generate hash with `Rubeus hash`._
 
+For cross-domain impersonations (i.e. through trust) specify correct dc with `/dc:<dc>`.
+
 It is then possible to authenticate to `US-MSSQL` ([ad-authentication.md](../misc/ad-authentication.md "mention")) we have domain admin privileges on this machine but we are limited to this machine.
