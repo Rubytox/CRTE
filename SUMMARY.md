@@ -28,6 +28,8 @@
 * [DPAPI](ad-privilege-escalation/dpapi.md)
 * [DA to EA](ad-privilege-escalation/da-to-ea.md)
 * [ADConnect](ad-privilege-escalation/adconnect.md)
+* [SID Filtering](ad-privilege-escalation/sid-filtering.md)
+* [SQL Servers](ad-privilege-escalation/sql-servers.md)
 
 ## ADCS
 
@@ -36,6 +38,8 @@
   * [ESC1](adcs/exploitation/esc1.md)
 
 ## Lateral Movements
+
+* [Page 1](lateral-movements/page-1.md)
 
 ## Misc
 
