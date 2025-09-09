@@ -9,6 +9,7 @@ Example of AD pentest methodology for CRTE:
    3. List trusts: [domain-trusts.md](active-directory-enumeration/domain-trusts.md "mention")
    4. Domain enumeration on trusts: [todo.md](active-directory-enumeration/todo.md "mention")
    5. List MSOL accounts: [entra-id-recon.md](active-directory-enumeration/entra-id-recon.md "mention")
+   6. Enumerate ADCS: [Broken link](broken-reference "mention")
 3. Privilege escalation on starting domain:
    1. Find kerberoastable users: [kerberoasting.md](ad-privilege-escalation/kerberoasting.md "mention")
    2. Find machines where LAPS is readable by a compromised user: [laps.md](ad-privilege-escalation/laps.md "mention")
@@ -21,7 +22,6 @@ Example of AD pentest methodology for CRTE:
    9. If there is an MSSQL server, list accesses and SQL links: [sql-servers.md](ad-privilege-escalation/sql-servers.md "mention")
    10. If I am local admin of a server, dump LSASS with [lsass.md](ad-privilege-escalation/lsass.md "mention")
    11. If I am local admin of a server, decrypt secrets (certificates for instance) with [dpapi.md](ad-privilege-escalation/dpapi.md "mention")
-   12. ADCS: [Broken link](broken-reference "mention")
 4. Lateralise to parent forest:
    1. Golden ticket with krbtgt: [golden-ticket.md](ad-privilege-escalation/golden-ticket.md "mention")
    2. Domain trust key and silver ticket: [da-to-ea.md](ad-privilege-escalation/da-to-ea.md "mention")
