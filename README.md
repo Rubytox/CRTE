@@ -25,7 +25,8 @@ Example of AD pentest methodology for CRTE:
 4. Lateralise to parent forest:
    1. Golden ticket with krbtgt: [golden-ticket.md](ad-privilege-escalation/golden-ticket.md "mention")
    2. Domain trust key and silver ticket: [da-to-ea.md](ad-privilege-escalation/da-to-ea.md "mention")
-   3. Perform similar checks as for starting domain
+   3. With UD, coerce parent DC to UD server: [unconstrained-delegation.md](ad-privilege-escalation/unconstrained-delegation.md "mention")
+   4. Perform similar checks as for starting domain
 5. Lateralise to trusted forest:
    1. Domain trust key and silver ticket: [da-to-ea.md](ad-privilege-escalation/da-to-ea.md "mention")
    2. SID filtering: [sid-filtering.md](ad-privilege-escalation/sid-filtering.md "mention")
