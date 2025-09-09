@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Introduction](README.md)
+* [Methodology](README.md)
 
 ## Active Directory Enumeration
 
