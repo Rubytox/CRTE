@@ -119,3 +119,10 @@ However, BloodHound does not show ACLs on OUs, so it may still be interesting to
 
 ## List computers on which we have write permission
 
+## List Foreign Security Principals (FSP)
+
+```powershell
+[PowerView]> Find-ForeignGroup -Verbose
+[PowerView]> Find-ForeignUser -Verbose
+[ADModule]> Get-ADObject -Filter {objectClass -eq "foreignSecurityPrincipal"}
+```
