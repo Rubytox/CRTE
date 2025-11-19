@@ -1,5 +1,13 @@
 # SID Filtering
 
+## Check if SID Filtering is enabled
+
+```powershell
+> Get-ADTrust -Filter *
+```
+
+And check for SIDFilteringForestAware.
+
 ## List groups with SID > 1000
 
 ```powershell
