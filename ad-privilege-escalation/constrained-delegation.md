@@ -7,6 +7,8 @@ This property is written in the attribute `msDS-AllowedToDelegateTo`.
 ## List devices that support CD
 
 ```powershell
+[PowerView]> Get-DomainUser -TrustedToAuth
+[PowerView]> Get-DomainComputer -TrustedToAuth
 > Get-ADObject -Filter { msDS-AllowedToDelegateTo -ne "$null" } -Properties msDS-AllowedToDelegateTo
 DistinguishedName        : CN=appsvc,CN=Users,DC=us,DC=techcorp,DC=local
 msDS-AllowedToDelegateTo : {CIFS/us-mssql.us.techcorp.local, CIFS/us-mssql}
@@ -16,6 +18,8 @@ ObjectGUID               : 4f66bb3a-d07e-40eb-83ae-92abcb9fc04c
 ```
 
 This means that the user `appsvc` has constrained delegation to the server `US-MSSQL` on the SMB service (CIFS).
+
+If I compromise the `appsvc` user, I can access the `CIFS` service of `us-mssql` as any user of the domain.
 
 ## Impersonate privileged user
 
