@@ -126,3 +126,9 @@ However, BloodHound does not show ACLs on OUs, so it may still be interesting to
 [PowerView]> Find-ForeignUser -Verbose
 [ADModule]> Get-ADObject -Filter {objectClass -eq "foreignSecurityPrincipal"}
 ```
+
+## List interesting ACLs for another domain
+
+```powershell
+> Find-InterestingDomainAcl -ResolveGUIDs -Domain dbvendor.local
+```
